@@ -31,7 +31,7 @@
 
 <head>
     <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta content="Digital Garden" property="og:site_name" />
+    <meta content="Andrea Manzato" property="og:site_name" />
     <meta
         content="A Jekyll theme for Obsidian users to build digital garden"
         property="og:description">
@@ -53,7 +53,7 @@
 
     <link rel="canonical" href="{{site.url}}{{page.url}}" />
     <link rel="apple-touch-icon" href="/assets/img/profile.png">
-    <link rel="icon" href="/assets/img/favicon.png" type="image/png" sizes="16x16" />
+    <link rel="icon" href="/assets/img/manzato_lighthouse.ico" type="image/x-icon" sizes="1x16" />
     <link href="/assets/css/style.css" rel="stylesheet" media="all" class="default" />
     <link href="/assets/css/main.css" rel="stylesheet" media="all" class="default" />
     <link href="/assets/css/Util.css" rel="stylesheet" media="all" class="default" />
@@ -70,15 +70,21 @@
     {%- include Header.html -%}
     <section class="section">
         <div class="columns is-centered">
-            <!--- CASE 1 : Homepage-->
 
+            <!--- CASE 1 : Homepage-->
+            
             {%- if page.permalink == "/" -%}
                     {%- if site.preferences.homepage.enabled -%}
+                            <div class="column is-three-fifths">
+                            <main>
                             <!--- Show Homepage -->
                             {%- include Homepage.html -%}
+                            {%- include Footer.html -%}
+                            </main>
+                            </div>
                             <script src="/assets/js/modeswitcher.js"></script>
                     {%- else -%}
-                            <!--- Show Feed Part -->
+                            <!-FeedContent-- Show Feed Part -->
                     <div class="column is-half">
                             {%- include FeedContent.html -%}
                             {%- include Feed.html -%}
@@ -161,13 +167,27 @@
             <!--- CASE 5 :  Notes Listing page -->   
 
             {%- if page.permalink == "/notes" -%}
-                <div class="column is-half">
+                <div class="column is-three-fifths">
                     {%- include FeedContent.html -%}
                     {%- include Feed.html -%}
                     {%- include Footer.html -%}             
                 </div>
             {%- endif -%}
 
+            <!--- CASE 6 : Projects -->
+
+            {%- if page.permalink == "/projects" -%}
+
+                <div class="column is-three-fifths">
+                <main>
+                <!--- Show Projects -->
+                {%- include Projects.html -%}
+                {%- include Footer.html -%}
+                <script src="/assets/js/modeswitcher.js"></script>
+                </main>
+                </div>
+    
+            {%- endif -%}            
         </div>
     </section>     
 </body>
