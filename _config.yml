@@ -19,7 +19,6 @@
 # in the templates via {{ site.myvariable }}.
 
 
-baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://andreamnzt.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 
 #######################################################################
@@ -28,7 +27,7 @@ url: "https://andreamnzt.github.io/" # the base hostname & protocol for your sit
 # your social media links etc
 #######################################################################
 
-heading: Andrea Manzato # Change this 
+heading: Andrea Manzato
 copyright:  
   year: 2022
   msg: Andrea Manzato # This is a mandatory attribute for copyright to be displayed ; If deleting this, edit at footer layout.
