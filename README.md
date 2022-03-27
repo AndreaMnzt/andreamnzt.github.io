@@ -1,4 +1,4 @@
-# Jekyll Garden v 0.3 (Stable)
+# andreamnzt.github.io
 My personal website, built with Jekyll Garden v0.3
 
 ## Credits & Thanks
