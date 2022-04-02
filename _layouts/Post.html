@@ -52,7 +52,7 @@
     <title>{{site.heading}}</title>
 
     <link rel="canonical" href="{{site.url}}{{page.url}}" />
-    <link rel="apple-touch-icon" href="/assets/img/profile.png">
+    <link rel="apple-touch-icon" href="/assets/img/profile.webp">
     <link rel="icon" href="/assets/img/manzato_lighthouse.ico" type="image/x-icon" sizes="1x16" />
     <link href="/assets/css/style.css" rel="stylesheet" media="all" class="default" />
     <link href="/assets/css/main.css" rel="stylesheet" media="all" class="default" />
@@ -67,6 +67,11 @@
 </head>
 
 <body>
+    <!-- lines moving around in the backgroud-->
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+
     {%- include Header.html -%}
     <section class="section">
         <div class="columns is-centered">
@@ -75,7 +80,7 @@
             
             {%- if page.permalink == "/" -%}
                     {%- if site.preferences.homepage.enabled -%}
-                            <div class="column is-three-fifths">
+                            <div class="column is-four-fifths">
                             <main>
                             <!--- Show Homepage -->
                             {%- include Homepage.html -%}
@@ -97,7 +102,7 @@
 
             {%- if page.content-type == "notes" 
             or page.content-type == "post"  -%}
-                <div class="column is-three-fifths">
+                <div class="column is-four-fifths">
                     <main>
                         <div class="note-page-section">
                             <div class="buttons for-back-home">
@@ -167,7 +172,7 @@
             <!--- CASE 5 :  Notes Listing page -->   
 
             {%- if page.permalink == "/notes" -%}
-                <div class="column is-three-fifths">
+                <div class="column is-four-fifths">
                     {%- include FeedContent.html -%}
                     {%- include Feed.html -%}
                     {%- include Footer.html -%}             
@@ -178,7 +183,7 @@
 
             {%- if page.permalink == "/projects" -%}
 
-                <div class="column is-three-fifths">
+                <div class="column is-four-fifths">
                 <main>
                 <!--- Show Projects -->
                 {%- include Projects.html -%}

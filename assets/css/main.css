@@ -283,6 +283,7 @@ code {
   font-size: 0.875em;
   font-weight: normal;
   padding: 0.25em 0.5em 0.25em; }
+  
 
 hr {
   background-color: var(--bg-sub);
@@ -3951,3 +3952,41 @@ a.tag:hover {
   .homeblock h1 a:hover {
     color : var(--link);
   }
+
+  /* lines moving around in the background*/
+  /* credits to Alison Quaglia */
+  
+  .bg {
+    animation:slide 6s ease-in-out infinite alternate !important;
+    background-image: linear-gradient(-60deg, rgb(88, 88, 88) 50%, rgb(230, 230, 230) 50%) !important;
+    bottom:0 !important;
+    left:-50% !important;
+    opacity:.5 !important;
+    position:fixed !important;
+    right:-50% !important;
+    top:0 !important;
+    z-index:-1 !important;
+  }
+  
+  .bg2 {
+    animation-direction:alternate-reverse !important;
+    animation-duration:8s !important;
+  }
+  
+  .bg3 {
+    animation-duration:10s !important;
+  }  
+  
+  @keyframes slide {
+    0% {
+      transform:translateX(-25%);
+    }
+    100% {
+      transform:translateX(25%);
+    }
+  }
+
+p {
+  overflow: auto !important;
+}
+
