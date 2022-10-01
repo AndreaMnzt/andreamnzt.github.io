@@ -3958,7 +3958,7 @@ a.tag:hover {
   
   .bg {
     animation:slide 6s ease-in-out infinite alternate !important;
-    background-image: linear-gradient(-60deg, rgb(88, 88, 88) 50%, rgb(230, 230, 230) 50%) !important;
+    background-image: linear-gradient(-60deg, rgb(0,128,255) 50%, rgb(137,196,255) 50%) !important;
     bottom:0 !important;
     left:-50% !important;
     opacity:.5 !important;
